@@ -1,0 +1,9 @@
+p 
+
+label = t('product')
+= @product.produto
+br
+label = t('price')
+= number_to_currency(@product.valor)
+br
+a href='#{root_path}' = t('back')

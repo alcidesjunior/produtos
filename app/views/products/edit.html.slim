@@ -1,0 +1,14 @@
+a href='#{root_path}' = t('back')
+- if @product.errors.any?
+	- pluralize(@product.errors.count,'erro')
+	- @product.errors.full_messages.each do |msg|
+		br
+		= msg
+=form_for :product, url: product_path, method: :patch do |f|
+	= t('product')
+	= f.text_field :produto
+	br
+	= t('price')
+	= f.text_field :valor
+	br
+	= f.submit:Atualizar

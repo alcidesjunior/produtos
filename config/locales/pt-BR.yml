@@ -1,0 +1,26 @@
+"pt-BR":
+  errors:
+    messages:
+        required: "Obrigatório"
+        taken: "já existe!"
+
+  # Active Record models configuration
+  activerecord:
+    errors:
+      models:
+        product:
+          attributes:
+            produto:
+              blank: "não pode estar vazio!"
+            valor:
+              blank: "não pode estar vazio!"  
+  back: "Voltar"
+  product: "Produto: "
+  price: "Valor: "
+  label_product: "Produto"
+  label_price: "Valor"
+  label_opt: "Opções"
+  label_view: "Ver"
+  label_edit: "Editar"
+  label_dlt: "Deletar"
+  label_newproduct: "Novo produto"

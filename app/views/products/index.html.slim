@@ -1,0 +1,21 @@
+a href='/products/new' = t('label_newproduct')
+br
+
+table width='80%' align='center'
+ tr
+ 	th Id
+ 	th =t('label_product')
+ 	th =t('label_price')
+ 	th colspan='3' =t('label_opt')
+
+ 	- @products.each do |product|
+	 	tr style='margin-left:auto;margin-right:auto'
+	 		td = product.id
+	 		td = product.produto
+	 		td = product.valor
+	 		td 
+	 			a href= '#{product_path(product)}' = t('label_view')
+	 		td
+	 			a href='#{edit_product_path(product)}' = t('label_edit')
+	 		td
+	 			=link_to t('label_dlt'), product_path(product),method: :delete, data: {confirm:"Tem certeza?"} 
